@@ -5,5 +5,6 @@ class asusmobo(scrapy.Item):
     link = scrapy.Field()
 
 class asusgpu(scrapy.Item):
-    item_name = scrapy.Field()
-    link = scrapy.Field()
+    'Item Name' = scrapy.Field()
+    'Manufacturer'\s Link' = scrapy.Field()
+    Manufacturer'\s Link
