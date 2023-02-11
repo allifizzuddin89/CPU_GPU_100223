@@ -97,16 +97,16 @@ TWISTED_REACTOR = 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'
 
 ### scrapy-playwright pre-installation####
 
-# DOWNLOAD_HANDLERS = {
-#     "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
-#     "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
-# }
+DOWNLOAD_HANDLERS = {
+    "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+    "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+}
 
 # Additional settings
-# PLAYWRIGHT_LAUNCH_OPTIONS = {"headless" : False}
+PLAYWRIGHT_LAUNCH_OPTIONS = {"headless" : False}
 # PLAYWRIGHT_BROWSER_TYPE(firefox)
 ## Uncomment if not using page_method in meta settings
-# PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT = 200000
+PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT = 200000
 
 ####################################
 
