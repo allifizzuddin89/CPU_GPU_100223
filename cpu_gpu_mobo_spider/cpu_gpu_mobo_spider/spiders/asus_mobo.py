@@ -2,12 +2,6 @@ import scrapy
 import json
 #using regex to search common names
 import re
-# from scrapy.shell import inspect_response
-
-# proxy
-from creds import API
-from scraper_api import ScraperAPIClient
-client = ScraperAPIClient(API)
 
 import logging
 logger = logging.getLogger('my_logger')
@@ -19,8 +13,7 @@ logging.basicConfig(filename="logfile.txt",
 
 class AsusMoboSpider(scrapy.Spider):
     name = "asus_mobo"
-    # allowed_domains = ["x"]
-    # start_urls = ["http://x/"]
+
     url = 'https://odinapi.asus.com/recent-data/apiv2/SeriesFilterResult?SystemCode=asus&WebsiteCode=my&ProductLevel1Code=motherboards-components&ProductLevel2Code=motherboards&PageSize=20&PageIndex={i}&CategoryName=Intel,AMD&SeriesName=&SubSeriesName=&Spec=&SubSpec=&Sort=Recommend&siteID=www&sitelang='
 
     headers = {
@@ -67,58 +60,3 @@ class AsusMoboSpider(scrapy.Spider):
                     'Manufacturer URL' : data[i]['ProductURL'],
                 }
                 yield item
-                # x = cpu.group()
-                # y = type(x)
-                # print('\nCpu value {} X type {}'.format(x,y))
-                # x = mobo.group()
-                # y = type(x)
-                # print('\nMobo value {} X type {}'.format(x,y))
-            # if (cpu_socket.search(data[i]['ModelSpec']).groups() != None or mobo_chipset.search(data[i]['ModelSpec']).groups() != None):
-            #     item = {
-            #         'Item Name' : 'ASUS '+data[i]['Name'].strip('<h2>').strip('</h2>'),
-            #         'Part No' : data[i]['PartNo'],
-            #         'CPU Socket' : cpu_socket.search(data[i]['ModelSpec']).groups(),
-            #         'Chipset' : mobo_chipset.search(data[i]['ModelSpec']).groups(),
-            #         'Manufacturer URL' : data[i]['ProductURL'],
-            #     }
-            #     yield item
-            # else:
-            #     continue
-
-            # try:
-            #     item = {
-            #         'Item Name' : 'ASUS '+data[i]['Name'].strip('<h2>').strip('</h2>'),
-            #         'Part No' : data[i]['PartNo'],
-            #         'CPU Socket' : cpu_socket.search(data[i]['ModelSpec']).group(0),
-            #         'Chipset' : mobo_chipset.search(data[i]['ModelSpec']).group(0),
-            #         'Manufacturer URL' : data[i]['ProductURL'],
-            #     }
-            #     yield item
-            # except:
-            #     item = {
-            #         'Item Name' : 'ASUS '+data[i]['Name'].strip('<h2>').strip('</h2>'),
-            #         'Part No' : '',
-            #         'CPU Socket' : cpu_socket.search(data[i]['ModelSpec']).group(0),
-            #         'Chipset' : mobo_chipset.search(data[i]['ModelSpec']).group(0),
-            #         'Manufacturer URL' : data[i]['ProductURL'],
-            #     }
-            #     yield item
-            # try:
-            #     item = {
-            #         'Item Name' : 'ASUS '+data[i]['Name'].strip('<h2>').strip('</h2>'),
-            #         'Part No' : data[i]['PartNo'],
-            #         'CPU Socket' : '',
-            #         'Chipset' : mobo_chipset.search(data[i]['ModelSpec']).group(0),
-            #         'Manufacturer URL' : data[i]['ProductURL'],
-            #     }
-            #     yield item
-            # except:
-            #     item = {
-            #         'Item Name' : 'ASUS '+data[i]['Name'].strip('<h2>').strip('</h2>'),
-            #         'Part No' : data[i]['PartNo'],
-            #         'CPU Socket' : cpu_socket.search(data[i]['ModelSpec']).group(0),
-            #         'Chipset' : '',
-            #         'Manufacturer URL' : data[i]['ProductURL'],
-            #     }
-            #     yield item
-                               
