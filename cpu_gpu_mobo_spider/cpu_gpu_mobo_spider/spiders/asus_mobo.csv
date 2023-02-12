@@ -1,4 +1,4 @@
-Item Name,Part No,CPU Socket,Chipset,Manufacturer URL
+Item Name,Part No,CPU Socket,Motherboard Chipset,Manufacturer URL
 ASUS PRIME B760-PLUS D4,,LGA 1700,B760,https://www.asus.com/my/Motherboards-Components/Motherboards/PRIME/PRIME-B760-PLUS-D4/
 ASUS PRIME B760M-A WIFI D4,,LGA 1700,B760,https://www.asus.com/my/Motherboards-Components/Motherboards/PRIME/PRIME-B760M-A-WIFI-D4/
 ASUS PRIME B760M-A D4,,LGA 1700,B760,https://www.asus.com/my/Motherboards-Components/Motherboards/PRIME/PRIME-B760M-A-D4/
@@ -97,6 +97,10 @@ ASUS TUF GAMING H470-PRO (WI-FI),,LGA 1200,H470,https://www.asus.com/my/Motherbo
 ASUS PRIME B460M-K,,LGA 1200,B460,https://www.asus.com/my/Motherboards-Components/Motherboards/PRIME/PRIME-B460M-K/
 ASUS PRIME H410M-K,,LGA 1200,H410,https://www.asus.com/my/Motherboards-Components/Motherboards/PRIME/PRIME-H410M-K/
 ASUS TUF GAMING B460M-PLUS (WI-FI),,LGA 1200,B460,https://www.asus.com/my/Motherboards-Components/Motherboards/TUF-Gaming/TUF-GAMING-B460M-PLUS-WI-FI/
+ASUS H110M-K,,R4,H110,https://www.asus.com/my/Motherboards-Components/Motherboards/PRIME/H110M-K/
+ASUS Pro WS X570-ACE,,AM4,X570,https://www.asus.com/my/Motherboards-Components/Motherboards/Workstation/Pro-WS-X570-ACE/
+ASUS ROG Zenith Extreme Alpha,90MB10G0-M0UAY0,R4,X399,https://rog.asus.com/my/motherboards/rog-zenith/rog-zenith-extreme-alpha-model/
+ASUS ROG CROSSHAIR VII HERO (WI-FI),90MB0XF0-M0UAY0,R4,X470,https://rog.asus.com/my/motherboards/rog-crosshair/rog-crosshair-vii-hero-wi-fi-model/
 ASUS PRIME B460M-A,,LGA 1200,B460,https://www.asus.com/my/Motherboards-Components/Motherboards/PRIME/PRIME-B460M-A/
 ASUS TUF GAMING Z490-PLUS (WI-FI),,LGA 1200,Z490,https://www.asus.com/my/Motherboards-Components/Motherboards/TUF-Gaming/TUF-GAMING-Z490-PLUS-WI-FI/
 ASUS ProArt Z490-CREATOR 10G,,LGA 1200,Z490,https://www.asus.com/my/Motherboards-Components/Motherboards/ProArt/ProArt-Z490-CREATOR-10G/
@@ -106,7 +110,3 @@ ASUS ROG STRIX B460-F GAMING,90MB13R0-M0UAY0,LGA 1200,B460,https://rog.asus.com/
 ASUS ROG STRIX Z490-E GAMING,90MB12P0-M0UAY0,LGA 1200,Z490,https://rog.asus.com/my/motherboards/rog-strix/rog-strix-z490-e-gaming-model/
 ASUS ROG Strix TRX40-E Gaming,90MB12E0-M0MAY0,TR4,TRX40,https://rog.asus.com/my/motherboards/rog-strix/rog-strix-trx40-e-gaming-model/
 ASUS Prime TRX40-Pro,,R4,TRX40,https://www.asus.com/my/Motherboards-Components/Motherboards/PRIME/Prime-TRX40-Pro/
-ASUS H110M-K,,R4,H110,https://www.asus.com/my/Motherboards-Components/Motherboards/PRIME/H110M-K/
-ASUS Pro WS X570-ACE,,AM4,X570,https://www.asus.com/my/Motherboards-Components/Motherboards/Workstation/Pro-WS-X570-ACE/
-ASUS ROG Zenith Extreme Alpha,90MB10G0-M0UAY0,R4,X399,https://rog.asus.com/my/motherboards/rog-zenith/rog-zenith-extreme-alpha-model/
-ASUS ROG CROSSHAIR VII HERO (WI-FI),90MB0XF0-M0UAY0,R4,X470,https://rog.asus.com/my/motherboards/rog-crosshair/rog-crosshair-vii-hero-wi-fi-model/

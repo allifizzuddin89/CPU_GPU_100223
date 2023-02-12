@@ -56,7 +56,7 @@ class AsusMoboSpider(scrapy.Spider):
                     'Item Name' : 'ASUS '+data[i]['Name'].strip('<h2>').strip('</h2>'),
                     'Part No' : data[i]['PartNo'],
                     'CPU Socket' : cpu.group(),
-                    'Chipset' :mobo.group(),
+                    'Motherboard Chipset' :mobo.group(),
                     'Manufacturer URL' : data[i]['ProductURL'],
                 }
                 yield item
