@@ -56,21 +56,69 @@ class AsusMoboSpider(scrapy.Spider):
         data = json.loads(raw_data)
         data = data['Result']['ProductList']
         for i in range(0,len(data)):
-            try:
+            cpu = cpu_socket.search(data[i]['ModelSpec'])
+            mobo = mobo_chipset.search(data[i]['ModelSpec'])
+            if (cpu != None and mobo != None):
                 item = {
                     'Item Name' : 'ASUS '+data[i]['Name'].strip('<h2>').strip('</h2>'),
                     'Part No' : data[i]['PartNo'],
-                    'CPU Socket' : cpu_socket.search(data[i]['ModelSpec']).group(),
-                    'Chipset' : mobo_chipset.search(data[i]['ModelSpec']).group(),
+                    'CPU Socket' : cpu.group(),
+                    'Chipset' :mobo.group(),
                     'Manufacturer URL' : data[i]['ProductURL'],
                 }
                 yield item
-            except:
-                item = {
-                    'Item Name' : 'ASUS '+data[i]['Name'].strip('<h2>').strip('</h2>'),
-                    'CPU Socket' : None,
-                    'Chipset' : None,
-                    'Part No' : None,
-                    'Manufacturer URL' : data[i]['ProductURL']
-                }
-                yield item
+                # x = cpu.group()
+                # y = type(x)
+                # print('\nCpu value {} X type {}'.format(x,y))
+                # x = mobo.group()
+                # y = type(x)
+                # print('\nMobo value {} X type {}'.format(x,y))
+            # if (cpu_socket.search(data[i]['ModelSpec']).groups() != None or mobo_chipset.search(data[i]['ModelSpec']).groups() != None):
+            #     item = {
+            #         'Item Name' : 'ASUS '+data[i]['Name'].strip('<h2>').strip('</h2>'),
+            #         'Part No' : data[i]['PartNo'],
+            #         'CPU Socket' : cpu_socket.search(data[i]['ModelSpec']).groups(),
+            #         'Chipset' : mobo_chipset.search(data[i]['ModelSpec']).groups(),
+            #         'Manufacturer URL' : data[i]['ProductURL'],
+            #     }
+            #     yield item
+            # else:
+            #     continue
+
+            # try:
+            #     item = {
+            #         'Item Name' : 'ASUS '+data[i]['Name'].strip('<h2>').strip('</h2>'),
+            #         'Part No' : data[i]['PartNo'],
+            #         'CPU Socket' : cpu_socket.search(data[i]['ModelSpec']).group(0),
+            #         'Chipset' : mobo_chipset.search(data[i]['ModelSpec']).group(0),
+            #         'Manufacturer URL' : data[i]['ProductURL'],
+            #     }
+            #     yield item
+            # except:
+            #     item = {
+            #         'Item Name' : 'ASUS '+data[i]['Name'].strip('<h2>').strip('</h2>'),
+            #         'Part No' : '',
+            #         'CPU Socket' : cpu_socket.search(data[i]['ModelSpec']).group(0),
+            #         'Chipset' : mobo_chipset.search(data[i]['ModelSpec']).group(0),
+            #         'Manufacturer URL' : data[i]['ProductURL'],
+            #     }
+            #     yield item
+            # try:
+            #     item = {
+            #         'Item Name' : 'ASUS '+data[i]['Name'].strip('<h2>').strip('</h2>'),
+            #         'Part No' : data[i]['PartNo'],
+            #         'CPU Socket' : '',
+            #         'Chipset' : mobo_chipset.search(data[i]['ModelSpec']).group(0),
+            #         'Manufacturer URL' : data[i]['ProductURL'],
+            #     }
+            #     yield item
+            # except:
+            #     item = {
+            #         'Item Name' : 'ASUS '+data[i]['Name'].strip('<h2>').strip('</h2>'),
+            #         'Part No' : data[i]['PartNo'],
+            #         'CPU Socket' : cpu_socket.search(data[i]['ModelSpec']).group(0),
+            #         'Chipset' : '',
+            #         'Manufacturer URL' : data[i]['ProductURL'],
+            #     }
+            #     yield item
+                               
