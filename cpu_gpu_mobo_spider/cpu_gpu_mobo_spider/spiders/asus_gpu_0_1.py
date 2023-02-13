@@ -1,6 +1,8 @@
 import scrapy
 import json
-#using regex to search common names
+# To remove duplicate string
+from collections import OrderedDict
+#using regex for housekeeping
 import re
 
 class AsusGpu01Spider(scrapy.Spider):
@@ -24,9 +26,16 @@ class AsusGpu01Spider(scrapy.Spider):
         raw_data = response.text
         data = json.loads(raw_data)
         data = data['Result']['ProductList']
+        
+        def removeduplicate(str):
+            return "".join(OrderedDict.fromkeys(str))
+
         for i in range(0,len(data)):
+            cleanup = re.compile(r'<h2>|</h2>|</br>')
+            item_name = cleanup.sub('','ASUS '+data[i]['Name'])
+            # print(f'\n{item_name}\n')
             item = {
-                'Item Name' : 'ASUS '+data[i]['Name'].strip('<h2>').strip('</h2>'),
+                'Item Name' : item_name,
                 'Part No' : data[i]['PartNo'],
                 'Manufacturer URL' : data[i]['ProductURL'],
             }
