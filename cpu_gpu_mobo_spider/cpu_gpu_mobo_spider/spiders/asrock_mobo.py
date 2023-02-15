@@ -11,16 +11,17 @@ class AsrockMoboSpider(scrapy.Spider):
         
         # for url in self.start_urls:
         for i in cpu_socket:
-            yield scrapy.Request(
-                url=self.url.format(i), 
-                headers= {"user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.42"},
-                # free rotating proxy webshare
-                # please kindly register for paid proxy if you require to run this code without disruption
-                meta = {"proxy" : "http://wojlycot-rotate:gow56st01xs6@p.webshare.io:80"},
-                dont_filter=True, 
-                cb_kwargs={'cpusocket':i} ,
-                callback=self.parse
-                )
+            if i != None:
+                yield scrapy.Request(
+                    url=self.url.format(i), 
+                    headers= {"user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.42"},
+                    # free rotating proxy webshare
+                    # please kindly register for paid proxy if you require to run this code without disruption
+                    meta = {"proxy" : "http://wojlycot-rotate:gow56st01xs6@p.webshare.io:80"},
+                    dont_filter=True, 
+                    cb_kwargs={'cpusocket':i} ,
+                    callback=self.parse
+                    )
 
     def parse(self, response, year, cpusocket):
         dfs = pd.read_html(response.css('div.wide-80-1.right.Support > table').get())
