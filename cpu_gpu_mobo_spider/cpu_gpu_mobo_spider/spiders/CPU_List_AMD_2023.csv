@@ -1,0 +1,23 @@
+,AMD,AMD,AMD,AMD
+,Name,Cores,Socket,Released
+0,Ryzen 3 7330U,4 / 8,Socket FP6,"Jan 4th, 2023"
+1,Ryzen 3 7335U,4 / 8,Socket FP7,"Jan 4th, 2023"
+2,Ryzen 5 7530U,6 / 12,Socket FP6,"Jan 4th, 2023"
+3,Ryzen 5 7535HS,6 / 12,Socket FP7,"Jan 4th, 2023"
+4,Ryzen 5 7535U,6 / 12,Socket FP7,"Jan 4th, 2023"
+5,Ryzen 5 7600,6 / 12,Socket AM5,"Jan 14th, 2023"
+6,Ryzen 5 7640HS,6 / 12,Socket FP8,Jan 2023
+7,Ryzen 5 7645HX,6 / 12,Socket FL1,"Jan 4th, 2023"
+8,Ryzen 7 7700,8 / 16,Socket AM5,"Jan 14th, 2023"
+9,Ryzen 7 7730U,8 / 16,Socket FP6,"Jan 4th, 2023"
+10,Ryzen 7 7735HS,8 / 16,Socket FP7,"Jan 4th, 2023"
+11,Ryzen 7 7735U,8 / 16,Socket FP7,"Jan 4th, 2023"
+12,Ryzen 7 7745HX,8 / 16,Socket FL1,"Jan 4th, 2023"
+13,Ryzen 7 7800X3D,8 / 16,Socket AM5,"Jan 4th, 2023"
+14,Ryzen 7 7840HS,8 / 16,Socket FP8,Jan 2023
+15,Ryzen 9 7845HX,12 / 24,Socket FL1,"Jan 4th, 2023"
+16,Ryzen 9 7900,12 / 24,Socket AM5,"Jan 14th, 2023"
+17,Ryzen 9 7900X3D,12 / 24,Socket AM5,"Jan 4th, 2023"
+18,Ryzen 9 7940HS,8 / 16,Socket FP8,Jan 2023
+19,Ryzen 9 7945HX,16 / 32,Socket FL1,"Jan 4th, 2023"
+20,Ryzen 9 7950X3D,16 / 32,Socket AM5,"Jan 4th, 2023"
