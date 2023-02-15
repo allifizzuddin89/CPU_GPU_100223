@@ -1,5 +1,6 @@
 import scrapy
 import pandas as pd
+import urllib.parse
 
 
 class AsrockMoboSpider(scrapy.Spider):
@@ -24,13 +25,46 @@ class AsrockMoboSpider(scrapy.Spider):
                     )
 
     def parse(self, response, cpusocket):
+        # if cpusocket != "FM2%2b" and cpusocket != "AM3%2b":
         dfs = pd.read_html(response.css('div.wide-80-1.right.Support > table').get())
         df = pd.concat(dfs)
         df = df.iloc[:,:-1]
         df['Manufacturer'] = 'ASROCK'
+        df['CPU Socket'] = cpusocket
         cols = df.columns.tolist()
-        cols = cols[-1:] + cols[:-1]
+        cols = cols[-2:] + cols[:-2]
         df = df[cols]
+        # df[['CPU Chipset','Part number']] = df.Model.str.split('\(|\)', expand=True)
         # item = df.head()
         # print(item)
         df.to_csv('ASROCK_mobo_{}.csv'.format(cpusocket))
+        # elif cpusocket == "FM2%2b":
+        #     i = cpusocket.index('FM2%2b')
+        #     cpusocket[i] = cpusocket[i].encode('utf8')
+        #     dfs = pd.read_html(response.css('div.wide-80-1.right.Support > table').get())
+        #     df = pd.concat(dfs)
+        #     df = df.iloc[:,:-1]
+        #     df['Manufacturer'] = 'ASROCK'
+        #     df['CPU Socket'] = cpusocket
+        #     cols = df.columns.tolist()
+        #     cols = cols[-2:] + cols[:-2]
+        #     df = df[cols]
+        #     # df[['CPU Chipset','Part number']] = df.Model.str.split('\(|\)', expand=True)
+        #     item = df.head()
+        #     print(item)
+        #     # df.to_csv('ASROCK_mobo_{}.csv'.format(cpusocket))
+        # elif cpusocket == "FM3%2b":
+        #     i = cpusocket.index('FM3%2b')
+        #     cpusocket[i] = cpusocket[i].encode('utf8')
+        #     dfs = pd.read_html(response.css('div.wide-80-1.right.Support > table').get())
+        #     df = pd.concat(dfs)
+        #     df = df.iloc[:,:-1]
+        #     df['Manufacturer'] = 'ASROCK'
+        #     df['CPU Socket'] = cpusocket
+        #     cols = df.columns.tolist()
+        #     cols = cols[-2:] + cols[:-2]
+        #     df = df[cols]
+        #     # df[['CPU Chipset','Part number']] = df.Model.str.split('\(|\)', expand=True)
+        #     item = df.head()
+        #     print(item)
+        #     # df.to_csv('ASROCK_mobo_{}.csv'.format(cpusocket))

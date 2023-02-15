@@ -1,0 +1,35 @@
+,Manufacturer,Family,Number,Core,Frequency,Cache,Power
+0,ASROCK,Xeon,X3470(B1),Lynnfield,2.93GHz,8MB,95W
+1,ASROCK,Xeon,X3460(B1),Lynnfield,2.8GHz,8MB,95W
+2,ASROCK,Xeon,X3450(B1),Lynnfield,2.66GHz,8MB,95W
+3,ASROCK,Xeon,X3440(B1),Lynnfield,2.53GHz,8MB,95W
+4,ASROCK,Xeon,X3430(B1),Lynnfield,2.40GHz,8MB,95W
+5,ASROCK,Xeon,L3426(B1),Lynnfield,1.86GHz,8MB,45W
+6,ASROCK,Core i7,i7-880(B1),Lynnfield,3.06GHz,8MB,95W
+7,ASROCK,Core i7,i7-875K(B1),Lynnfield,2.93GHz,8MB,95W
+8,ASROCK,Core i7,i7-870S(B1),Lynnfield,2.66GHz,8MB,82W
+9,ASROCK,Core i7,i7-870(B1),Lynnfield,2.93GHz,8MB,95W
+10,ASROCK,Core i7,i7-860S(B1),Lynnfield,2.53GHz,8MB,82W
+11,ASROCK,Core i7,i7-860(B1),Lynnfield,2.80GHz,8MB,95W
+12,ASROCK,Core i5,i5-760(B1),Lynnfield,2.80GHz,8MB,95W
+13,ASROCK,Core i5,i5-750S(B1),Lynnfield,2.40GHz,8MB,82W
+14,ASROCK,Core i5,i5-750(B1),Lynnfield,2.66GHz,8MB,95W
+15,ASROCK,Core i5,i5-680(K0),Clarkdale,3.60GHz,4MB,73W
+16,ASROCK,Core i5,i5-670(K0),Clarkdale,3.46GHz,4MB,73W
+17,ASROCK,Core i5,i5-670(C2),Clarkdale,3.46GHz,4MB,73W
+18,ASROCK,Core i5,i5-661(K0),Clarkdale,3.33GHz,4MB,87W
+19,ASROCK,Core i5,i5-661(C2),Clarkdale,3.33GHz,4MB,87W
+20,ASROCK,Core i5,i5-660(K0),Clarkdale,3.33GHz,4MB,73W
+21,ASROCK,Core i5,i5-660(C2),Clarkdale,3.33GHz,4MB,73W
+22,ASROCK,Core i5,i5-655K(K0),Clarkdale,3.20GHz,4MB,73W
+23,ASROCK,Core i5,i5-650(K0),Clarkdale,3.20GHz,4MB,73W
+24,ASROCK,Core i5,i5-650(C2),Clarkdale,3.20GHz,4MB,73W
+25,ASROCK,Core i3,i3-560(K0),Clarkdale,3.20GHz,4MB,73W
+26,ASROCK,Core i3,i3-550(K0),Clarkdale,3.20GHz,4MB,73W
+27,ASROCK,Core i3,i3-540(K0),Clarkdale,3.06GHz,4MB,73W
+28,ASROCK,Core i3,i3-540(C2),Clarkdale,3.06GHz,4MB,73W
+29,ASROCK,Core i3,i3-530(K0),Clarkdale,2.93GHz,4MB,73W
+30,ASROCK,Core i3,i3-530(C2),Clarkdale,2.93GHz,4MB,73W
+31,ASROCK,Pentium Dual Core,G6960(K0),Clarkdale,2.93GHz,3MB,73W
+32,ASROCK,Pentium Dual Core,G6950(K0),Clarkdale,2.80GHz,3MB,73W
+33,ASROCK,Pentium Dual Core,G6950(C2),Clarkdale,2.80GHz,3MB,73W
