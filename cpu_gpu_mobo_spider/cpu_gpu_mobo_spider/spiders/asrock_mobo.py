@@ -7,8 +7,8 @@ class AsrockMoboSpider(scrapy.Spider):
     url ="https://www.asrock.com/support/cpu.us.asp?s={}"
 
     def start_requests(self):
-        cpu_socket = list("AM3","AM4","SP3","TR4","R4","LGA 1200","LGA 1155","LGA 1151","LGA 1156","LGA 2011","FM1","AM3+","LGA 1366","LGA 3647","LGA 2066","LGA 4189","LGA 1150","LGA 1700","LGA1700","AM5","SP5","LGA 4677","LGA 1567","LGA 771","AM2","AM2+")
-        
+        # cpu_socket = ["AM3","AM4","SP3","TR4","R4","LGA 1200","LGA 1155","LGA 1151","LGA 1156","LGA 2011","FM1","AM3+","LGA 1366","LGA 3647","LGA 2066","LGA 4189","LGA 1150","LGA 1700","LGA1700","AM5","SP5","LGA 4677","LGA 1567","LGA 771","AM2","AM2+"]
+        cpu_socket = ["AM4", "1200", "2066", "2011", "1700", "1156", "1155", "1151", "1150", "sTRX4", "TR4", "AM5", "FM2%2b", "FM2", "FM1", "AM3%2b", "AM1"]
         # for url in self.start_urls:
         for i in cpu_socket:
             if i != None:
@@ -23,9 +23,14 @@ class AsrockMoboSpider(scrapy.Spider):
                     callback=self.parse
                     )
 
-    def parse(self, response, year, cpusocket):
+    def parse(self, response, cpusocket):
         dfs = pd.read_html(response.css('div.wide-80-1.right.Support > table').get())
         df = pd.concat(dfs)
-        yield df.head()
-        # df = df.iloc[:,[0,2,4,8]]
-        # df.to_csv('ASROCK_mobo_{}.csv'.format(cpusocket))
+        df = df.iloc[:,:-1]
+        df['Manufacturer'] = 'ASROCK'
+        cols = df.columns.tolist()
+        cols = cols[-1:] + cols[:-1]
+        df = df[cols]
+        # item = df.head()
+        # print(item)
+        df.to_csv('ASROCK_mobo_{}.csv'.format(cpusocket))
