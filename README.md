@@ -20,7 +20,7 @@
 ### HOW-TO
 - Clone the repository
 ```bash  
-  git clone https://github.com/allifizzuddin89/trader-joes-inventorylist.git 
+  git clone https://github.com/allifizzuddin89/CPU_GPU_100223.git 
 ```
 - Create working environment (skip if already have any working environment)
 ```bash
