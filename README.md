@@ -1,5 +1,5 @@
 # Brief introduction
-- Scraping for cosumer motherboards, cpu, gpu list from known manufacturers.
+- Scraping for consumer motherboards, cpu, gpu list from known manufacturers.
 - Extracting related data regarding cpu details, gpu details, motherboard's details.
 - You may view the scraped data in the generated csv file in [directory](https://github.com/allifizzuddin89/CPU_GPU_100223/tree/master/cpu_gpu_mobo_spider/cpu_gpu_mobo_spider/spiders)
 
